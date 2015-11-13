@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="../includes/foundation/css/foundation.css">
+        <link rel="stylesheet" type="text/css" href="../includes/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../includes/animsition/animsition.min.css">
+		<!-- This is how you would link your custom stylesheet -->
+		<link href="../includes/icheck/skins/line/blue.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../includes/css/styles.css">
+        <title>Pague Fácil</title>
+    </head>
+<body id="body-restrita" class="animsition">
+	<div class="menu-top">
+		<div class="off-canvas-wrap" data-offcanvas>
+			<div class="inner-wrap">
+				<nav class="top-bar" data-topbar role="navigation">
+					<ul class="title-area">
+						<li class="name">
+							<h1><a class="left-off-canvas-toggle"><i class="fa fa-bars"></i> Menu</a></h1>
+						</li>
+						<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+						<li class="toggle-topbar"><a href="#"><span>Lucas Antunes <i class="fa fa-chevron-down"></i></span></a></li>
+					</ul>
+
+					<div class="middle tab-bar-section">
+					</div>
+
+					<section class="top-bar-section">
+						<!-- Right Nav Section -->
+						<ul class="right">
+							<li class="has-dropdown">
+								<a href="#"><i class="fa fa-user"></i> Lucas Antunes</a>
+								<ul class="dropdown">
+									<li><a href="#"><i class="fa fa-cog"></i> Perfil</a></li>
+									<li><a href="../index.html"><i class="fa fa-sign-out"></i> Sair</a></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- Left Nav Section -->
+						<ul class="left">
+							<li><a href="#"></a></li>
+						</ul>
+					</section>
+				</nav>
+				<aside class="left-off-canvas-menu">
+					<img src="../includes/imgs/logo.png" >
+					<div class="icon-bar vertical four-up">
+						<a href="../restrita_usuario.html" class="item" id="item">
+							<i class="fa fa-home"></i>
+							<label>Home</label>
+						</a>
+						<a href="pagar.html" class="item" id="item">
+							<i class="fa fa-money"></i>
+							<label>Pagar</label>
+						</a>
+						<a href="onde_estacionar.html" class="item" id="item">
+							<i class="fa fa-car"></i>
+							<label>Onde Estacionar</label>
+						</a>
+						<a href="historico.html" class="item" id="item">
+							<i class="fa fa-history"></i>
+							<label>Histórcio de Utilização</label>
+						</a>
+						<a href="comprar.html" class="item" id="item">
+							<i class="fa fa-credit-card"></i>
+							<label>Comprar Créditos</label>
+						</a>
+						<a href="onde_carregar.html" class="item" id="item">
+							<i class="fa fa-map-marker"></i>
+							<label>Onde Carregar</label>
+						</a>
+						<a class="item" id="item">
+							<i class="fa fa-info-circle"></i>
+							<label>Informações</label>
+						</a>
+					</div>
+				</aside>
+
+				<section class="main-section" style="height:600px;">
+					<form class="formPagar">
+						<div class="row">
+							<div class="large-12 columns">
+								<label id="titulo1">Digite o código do Adesivo ou Selecione um veículo</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="large-8 columns">
+								<div class="row">
+								    <div class="small-12 columns">
+								      <div class="row collapse">
+								      	<div class="small-2 columns">
+								          <a href="#" class="button postfix info"><i class="fa fa-camera"></i></a>
+								        </div>
+								        <div class="small-8 columns">
+								          <input type="text" placeholder="Código do Adesivo">
+								        </div>
+								        <div class="small-2 columns">
+								          <a href="#" id="procurar-adesivo" class="button postfix success">Procurar</a>
+								        </div>
+								      </div>
+								    </div>
+								</div>
+							</div>
+							<div class="large-4 columns">
+								<select id="placas">
+									<option value="husker">Veículos</option>
+									<option value="husker">ABC1234</option>
+									<option value="starbuck">HMB4133</option>
+									<option value="hotdog">GZW5240</option>
+								</select>
+							</div>
+						</div>
+						<div class="row" id="infos-pagamento">
+							<div class="small-12 large-12 columns">
+								<div class="panel">
+									<div class="row">
+										<center><h3 id="local_estacionamento">Estacionamento Shoping Cidade</h3></center>
+										<div class="small-12 large-6 columns">
+											<div class="row">
+												<div class="small-6 large-4 columns">
+													<label>Data:</label>
+												</div>
+												<div class="small-6 large-8 columns">
+													<label id="data_estacionamento">01/08/2015</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="small-6 large-4 columns">
+													<label>Hora Entrada:</label>
+												</div>
+												<div class="small-6 large-8 columns">
+													<label id="entrada_estacionamento">14:22</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="small-6 large-4 columns">
+													<label>Hora Saida:</label>
+												</div>
+												<div class="small-6 large-8 columns">
+													<label id="saida_estacionamento">17:28</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="small-6 large-4 columns">
+													<label>Permanência:</label>
+												</div>
+												<div class="small-6 large-8 columns">
+													<label id="permanencia_estacionamento">06 horas e 06 minutos</label>
+												</div>
+											</div>
+										</div>
+										<div class="small-12 large-6 columns">
+											<center><label id="valor_total_paga"><h1>R$9,00</h1></label></center>
+											<center><a id="pagar" class="button alert expand">Pagar</a></center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" id="metodo-pagamento">
+							<div class="small-12 large-12 columns">
+								<div class="panel">
+									<div class="row">
+										<center><h3>Forma de Pagamento</h3></center>
+										<div class="small-12 large-6 columns" id="bandeiras">
+											<input type="radio" name="pokemon" value="elo" id="elo"><label for="elo"><img src="../includes/imgs/elo.png" width="30px;"></label>
+											<input type="radio" name="pokemon" value="mastercard" id="mastercard"><label for="mastercard"><img src="../includes/imgs/mastercard.png" width="30px;"></label>
+											<input type="radio" name="pokemon" value="visa" id="visa"><label for="visa"><img src="../includes/imgs/visa.png" width="30px;"></label>
+											<input type="radio" name="pokemon" value="pague" id="pague"><label for="pague"><img src="../includes/imgs/pague-facil.png" width="30px;"></label>
+										</div>
+										<div class="small-12 large-6 columns" id="campo-senha">
+											<div class="row collapse">
+												<div class="small-10 columns">
+													<input type="text" placeholder="Digite a senha do Pague Fácil">
+												</div>
+												<div class="small-2 columns">
+													<a data-reveal-id="modalFinalizarPag" class="button postfix success">Finalizar</a>
+												</div>
+											</div>     		
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" id="cartao-credito">
+							<div class="small-12 large-12 columns">
+								<div class="row">
+									<center><h3 style="color:white;">Dados do Cartão</h3></center>
+									<div class="small-12 large-12 columns">			
+											<div class="row" style="margin-top:20px;">
+												<div class="small-12 large-12 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-5 large-4 columns">
+															<span class="prefix">Número</span>
+														</div>
+														<div class="small-7 large-8 columns">
+															<input id="numero-cartao" type="text" placeholder="Somente números">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="small-7 large-7 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-9 large-7 columns">
+															<span class="prefix">Vencimento</span>
+														</div>
+														<div class="small-3 large-5 columns">
+															<input id="mes" type="text" placeholder="Mês">
+														</div>
+													</div>
+												</div>
+												<div class="small-5 large-5 columns">
+													<input id="ano" type="text" placeholder="Ano">
+												</div>
+											</div>
+											<div class="row">
+												<div class="small-12 large-12 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-5 large-4 columns">
+															<span class="prefix">Código de Segurança</span>
+														</div>
+														<div class="small-7 large-8 columns">
+															<input id="cod-seguranca" type="text" placeholder="Ex.: 991">
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr>
+											<div class="row">
+												<div class="small-12 large-12 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-5 large-4 columns">
+															<span class="prefix">Nome</span>
+														</div>
+														<div class="small-7 large-8 columns">
+															<input id="nome" type="text" placeholder="">
+														</div>
+													</div>
+												</div>
+												<div class="small-12 large-12 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-5 large-4 columns">
+															<span class="prefix">Data de nascimento</span>
+														</div>
+														<div class="small-7 large-8 columns">
+															<input id="data-nascimento" type="text" placeholder="12/12/2012">
+														</div>
+													</div>
+												</div>
+												<div class="small-12 large-12 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-5 large-4 columns">
+															<span class="prefix">CPF</span>
+														</div>
+														<div class="small-7 large-8 columns">
+															<input id="cpf" type="text" placeholder="Somente números">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="small-7 large-7 columns">
+													<div class="row collapse prefix-radius">
+														<div class="small-9 large-7 columns">
+															<span class="prefix">Telefone</span>
+														</div>
+														<div class="small-3 large-5 columns">
+															<input id="ddd" type="text" placeholder="DDD">
+														</div>
+													</div>
+												</div>
+												<div class="small-5 large-5 columns">
+													<input id="telefone" type="text" placeholder="Número">
+												</div>
+											</div>
+											<div class="row">
+												<div id="finalizar_pagamento" class="small-12 large-12 columns">
+													<a data-reveal-id="modalPagar" class="button expand success">Finalizar</a>
+												</div>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>                 
+				</section>
+
+				<a class="exit-off-canvas"></a>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<div id="modalPagar" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<center><h3 id="modalTitle">Dados do Pagamento</h3></center>
+	<center><h6 id="modalTitle" style="color:#F04124;">Confira todos os dados abaixo e confirme o pagamento</h6></center>
+	<div class="row" id="dados-compra">
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Local: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="local"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Data: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="data"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Hora Entrada: </label>
+				</div>
+				<div class="small-6 large-6 columns">
+					<label id="entrada"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Hora Saída: </label>
+				</div>
+				<div class="small-6 large-6 columns">
+					<label id="saida"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Permanência: </label>
+				</div>
+				<div class="small-6 large-6 columns">
+					<label id="permanencia"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns" style="margin-bottom:20px">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Valor Total: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="valor_total_pagamento"></label>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Número Cartão: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="numero_cartao"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Vencimento </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="data_vencimento"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns" style="margin-bottom:20px;">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Código Segurança: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="cod_seguranca"></label>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Nome: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="nome_cartao"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Data Nascimento: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="data_nascimento"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>CPF: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="cpf_cartao"></label>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 large-12 columns">
+			<div class="row">
+				<div class="small-6 large-6 columns">
+					<label>Telefone: </label>
+				</div>
+				<div class="small-6 large-6 columns" style="text-align:left;">
+					<label id="telefone_cartao"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<center>
+		<div class="row" style="margin-top:30px;">
+			<div class="small-6 large-6 columns">
+				<a class="button alert confirma-pag"><i class="fa fa-times"></i> Cancelar</a>
+				
+			</div>
+			<div class="small-6 large-6 columns">
+				<a class="button success confirma-pag" data-reveal-id="modalPagamentoConfirmado"><i class="fa fa-check"></i> Confirmar</a>
+			</div>
+		</div>
+	</center>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<div id="modalFinalizarPag" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<center><h2 id="modalTitle">Confirmar Pagamento?</h2></center>
+	<center>
+		<div class="row">
+			<div class="small-6 large-6 columns">
+				<a class="button alert confirma-pag">Não</a>
+			</div>
+			<div class="small-6 large-6 columns">
+				<a class="button success confirma-pag" data-reveal-id="modalPagamentoConfirmado">Sim</a>
+			</div>
+		</div>
+	</center>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<div id="modalPagamentoConfirmado" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<center><h2 style="color:#43AC6A;" id="modalTitle"><i class="fa fa-shopping-cart"></i> Seu pagamento foi realizado.</h2></center>
+	<center><h5 id="modalTitle">Recebrá em instantes um sms com a confirmação.</h5></center>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<script src="../includes/js/jquery-1.11.3.min.js"></script>
+<script src="../includes/foundation/js/foundation.min.js"></script>
+<script type="text/javascript" src="../includes/animsition/animsition.min.js"></script>
+<script src="../includes/icheck/icheck.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-right',
+    outClass: 'fade-in-left',
+    inDuration: 300,
+    outDuration: 300,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+<script type="text/javascript" src="../includes/js/scripts.js"></script>

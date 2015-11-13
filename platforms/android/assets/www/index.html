@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="includes/foundation/css/foundation.css">
+                <link rel="stylesheet" type="text/css" href="includes/animsition/animsition.min.css">
+		<!-- This is how you would link your custom stylesheet -->
+		<link href="includes/icheck/skins/line/blue.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="includes/css/styles.css">
+        <title>Pague Fácil</title>
+    </head>
+    <body id="body-login" class="animsitionIndex">
+    	<center><img id="logo" src="includes/imgs/icon.png"></center>
+    	<form>
+    		<div class="row">
+    			<div class="small-12 columns">
+    				<input type="text" placeholder="CPF/CNPJ"/>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="small-12 columns">
+    				<input type="text" placeholder="SENHA"/>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="small-12 columns">
+    				<input id="checkbox1" type="checkbox"><label style="color:white;" for="checkbox1">Mantenha-me Conectado!</label>
+    			</div>
+    		</div>
+    		<div class="row" id="containCheck">
+    			<div class="small-6 columns">
+					<input class="tipoLogin" type="radio" id="check_usu" name="iCheck"checked>
+					<label>Usuário</label>
+    			</div>
+    			<div class="small-6 columns">
+					<input class="tipoLogin" type="radio" id="check_parc" name="iCheck" >
+					<label>Parceiro</label>
+    			</div>
+    		</div>
+    		<div class="row" style="margin-top:20px;">
+    			<div class="small-12 columns">
+    				<a id="btnLogar" class="button expand">Entrar</a>
+    			</div>
+    		</div>	
+    	</form>
+    	<p id="lostPass"><a href="">Perdeu sua senha?</a></p>
+		<p id="lostPass">Não Possue uma conta?<a href="cadastro.html" class="animsition-link"> Crie Agora</a></p>
+    </body>
+</html>
+<script src="includes/js/jquery-1.11.3.min.js"></script>
+<script src="includes/foundation/js/foundation.min.js"></script>
+<script type="text/javascript" src="includes/animsition/animsition.min.js"></script>
+<script src="includes/icheck/icheck.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+<script>
+$(document).ready(function(){
+  $('.tipoLogin').each(function(){
+    var self = $(this),
+      label = self.next(),
+      label_text = label.text();
+
+    label.remove();
+    self.iCheck({
+      checkboxClass: 'icheckbox_line-blue',
+      radioClass: 'iradio_line-blue',
+      insert: '<div class="icheck_line-icon"></div>' + label_text
+    });
+  });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".animsitionIndex").animsition({
+    inClass: 'fade-in-right',
+    outClass: 'fade-in-right',
+    inDuration: 300,
+    outDuration: 0,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+<script type="text/javascript" src="includes/js/scripts.js"></script>

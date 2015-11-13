@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="../includes/foundation/css/foundation.css">
+        <link rel="stylesheet" type="text/css" href="../includes/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../includes/animsition/animsition.min.css">
+		<!-- This is how you would link your custom stylesheet -->
+		<link href="../includes/icheck/skins/line/blue.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../includes/css/styles.css">
+        <title>Pague Fácil</title>
+    </head>
+<body id="body-restrita" class="animsition">
+	<div class="menu-top">
+		<div class="off-canvas-wrap" data-offcanvas>
+			<div class="inner-wrap">
+				<nav class="top-bar" data-topbar role="navigation">
+					<ul class="title-area">
+						<li class="name">
+							<h1><a class="left-off-canvas-toggle"><i class="fa fa-bars"></i> Menu</a></h1>
+						</li>
+						<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+						<li class="toggle-topbar"><a href="#"><span>Lucas Antunes <i class="fa fa-chevron-down"></i></span></a></li>
+					</ul>
+
+					<div class="middle tab-bar-section">
+					</div>
+
+					<section class="top-bar-section">
+						<!-- Right Nav Section -->
+						<ul class="right">
+							<li class="has-dropdown">
+								<a href="#"><i class="fa fa-user"></i> Lucas Antunes</a>
+								<ul class="dropdown">
+									<li><a href="#"><i class="fa fa-cog"></i> Perfil</a></li>
+									<li><a href="../index.html"><i class="fa fa-sign-out"></i> Sair</a></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- Left Nav Section -->
+						<ul class="left">
+							<li><a href="#"></a></li>
+						</ul>
+					</section>
+				</nav>
+				<aside class="left-off-canvas-menu">
+					<img src="../includes/imgs/logo.png" >
+					<div class="icon-bar vertical four-up">
+						<a href="../restrita_parceiro.html" class="item" id="item">
+							<i class="fa fa-home"></i>
+							<label>Home</label>
+						</a>
+						<a href="receber.html" class="item" id="item">
+							<i class="fa fa-money"></i>
+							<label>Receber Pagamento</label>
+						</a>
+						<a href="habilitar.html" class="item" id="item">
+							<i class="fa fa-car"></i>
+							<label>Habilitar Veículo</label>
+						</a>
+						<a href="historico.html" class="item" id="item">
+							<i class="fa fa-history"></i>
+							<label>Histórico de Vendas</label>
+						</a>
+						<a href="vender.html" class="item" id="item">
+							<i class="fa fa-credit-card"></i>
+							<label>Vender Créditos</label>
+						</a>
+						<a href="check.html" class="item" id="item">
+							<i class="fa fa-map-marker"></i>
+							<label>Check-IN do Veículo</label>
+						</a>
+						<a href="extrato.html" class="item" id="item">
+							<i class="fa fa-info-circle"></i>
+							<label>Extrato</label>
+						</a>
+					</div>
+				</aside>
+
+				<section class="main-section" style="height:600px;">
+					<form class="formPagar">
+						<div class="row">
+							<div class="large-12 columns">
+								<label id="titulo1">Extrato de Vendas</label>
+								<h5 style="color:white; text-align:center;">Digite o intervalo de Data ou deixe em branco para apuração do dia até o momento</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 large-6 columns">
+								<input type="date" placeholder="Data Incial">
+							</div>
+							<div class="small-12 large-6 columns">
+								<input type="date" placeholder="Data Incial">
+							</div>
+							<div class="small-12 large-12 columns">
+								<a class="button postfix success" id="apurar">Apurar</a>
+							</div>
+						</div>
+						<div class="row" id="dados-apuracao">
+							<div class="small-12 large-12 columns">
+								<div class="panel">
+								  <center><h5>Situação geral do dia até o momento</h5></center>
+								  <center>
+								  <div class="row">
+								  	<div class="small-6 large-6 columns" style="text-align:right;">
+								  		<h6 style="font-weight:bold;">Data/Hora: </h6>
+								  	</div>
+								  	<div class="small-6 large-6 columns" style="text-align:left;">
+								  		<h6 style="font-weight:bold;color:#008CBA;">30/09/2015 13:35</h6>
+								  	</div>
+								  </div>
+								  <hr>
+								  <div class="row">
+								  	<div class="small-6 large-6 columns" style="text-align:right;">
+								  		<h6 style="font-weight:bold;">Créditos Pré-pagos: </h6>
+								  	</div>
+								  	<div class="small-6 large-6 columns" style="text-align:left;">
+								  		<h6 style="font-weight:bold;color:#008CBA;">Quantidade: 26</h6>
+								  		<h6 style="font-weight:bold;color:#008CBA;">Valor Total: R$43,50</h6>
+								  	</div>
+								  </div>
+								  <hr>
+								  <div class="row">
+								  	<div class="small-6 large-6 columns" style="text-align:right;">
+								  		<h6 style="font-weight:bold;">Pagamentos Recebidos: </h6>
+								  	</div>
+								  	<div class="small-6 large-6 columns" style="text-align:left;">
+								  		<h6 style="font-weight:bold;color:#008CBA;">Quantidade: 55</h6>
+								  		<h6 style="font-weight:bold;color:#008CBA;">Valor Total: R$101,50</h6>
+								  	</div>
+								  </div>
+								  <div class="row">
+								  	<div class="small-12 large-12 columns">
+								  		<a class="button postfix info expand">Imprimir</a>
+								  	</div>
+								  </div>
+								  </center>
+								</div>
+							</div>
+						</div>
+					</form>                 
+				</section>
+
+				<a class="exit-off-canvas"></a>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<div id="modalExtrato" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<center><h2 id="modalTitle">Extrato de Vendas</h2></center>
+	<center>
+		<div class="row">
+			<div class="small-12 large-12 columns">
+				<label id></label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 large-12 columns">
+				<a class="button info expand">Imprimir</a>
+			</div>
+		</div>
+	</center>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<div id="modalPagamentoConfirmado" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<center><h2 style="color:#43AC6A;" id="modalTitle"><i class="fa fa-shopping-cart"></i> Seu pagamento foi realizado.</h2></center>
+	<center><h5 id="modalTitle">Recebrá em instantes um sms com a confirmação.</h5></center>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<script src="../includes/js/jquery-1.11.3.min.js"></script>
+<script src="../includes/foundation/js/foundation.min.js"></script>
+<script type="text/javascript" src="../includes/animsition/animsition.min.js"></script>
+<script src="../includes/icheck/icheck.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-right',
+    outClass: 'fade-in-left',
+    inDuration: 300,
+    outDuration: 300,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+<script type="text/javascript" src="../includes/js/scripts_parceiro.js"></script>
